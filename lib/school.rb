@@ -29,7 +29,7 @@ class School
   
   def sort
     temp_roster = {} 
-    temp_roster = @roster.sort_by { |grade, names| [grade, grade[1].sort] }
+    temp_roster = @roster.sort_by { |grade, names| [grade, names.sort] }
     @roster = temp_roster.to_h
   end
   
