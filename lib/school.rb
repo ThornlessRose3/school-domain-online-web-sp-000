@@ -30,7 +30,9 @@ class School
   def sort
     temp_roster = {} 
     temp_roster = @roster.sort_by { |grade, names| [grade, names] }
-    temp_roster
+    temp_roster.each do |x|
+      x[1] = x[1].sort_by
+    end
     @roster = temp_roster.to_h
   end
   
